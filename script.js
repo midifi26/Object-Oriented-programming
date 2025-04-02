@@ -12,9 +12,6 @@ class Persona {
     }
 };
 
-let misDatos= new Persona ('Michelle', 24, 'mujer');
-misDatos.ObtDetalles();
-
 // Crear la clase Estudiante, que hereda de Persona, e incluye las propiedades curso y grupo y el método registrar(), que muestre por pantalla el resultado.
 class Estudiante extends Persona{
     constructor(nombre , edad , genero , curso , grupo){
@@ -26,10 +23,6 @@ class Estudiante extends Persona{
     console.log(`Soy ${this.nombre}, tengo ${this.edad} soy ${this.genero}, curso ${this.curso} y estoy en el grupo ${this.grupo}.`);
    } 
 };
-
-let informacion = new Estudiante('Mauricio', 20, 'Hombre','Grado Superior de Marketing', 'C');
-informacion.registrar();
-
 
 // Crear la clase Estudiante, que hereda de Persona, e incluye las propiedades curso y grupo y el método registrar(), que muestre por pantalla el resultado.
 class Profesor extends Persona{
@@ -43,7 +36,13 @@ class Profesor extends Persona{
     }
 };
 
+// Crear los objetos y casos de prueba necesarios para comprobar el correcto funcionamiento de la jerarquía de clases.
+let misDatos= new Persona ('Michelle', 24, 'mujer');
+let informacion = new Estudiante('Mauricio', 20, 'Hombre','Grado Superior de Marketing', 'C');
 let presentacion = new Profesor('Anibal', 45, 'Hombre', 'Quimica', 'Universitario');
+
+misDatos.ObtDetalles();
+informacion.registrar();
 presentacion.asignar();
 
-// Crear los objetos y casos de prueba necesarios para comprobar el correcto funcionamiento de la jerarquía de clases.
+
